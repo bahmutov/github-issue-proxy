@@ -4,7 +4,8 @@
   "description": "Github issues proxy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-issues && commit-wizard"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,21 @@
     "github": "0.2.4",
     "nconf": "0.8.2",
     "pluralize": "1.2.1"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": [],
+      "pre-push": [],
+      "post-commit": [],
+      "post-merge": []
+    }
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "devDependencies": {
+    "git-issues": "1.1.0",
+    "pre-git": "1.2.11"
   }
 }
