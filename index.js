@@ -5,7 +5,7 @@ function hasValidOptions() {
     config.get('repo');
 }
 
-if (!hasValidOptions) {
+if (!hasValidOptions()) {
   console.log('use: --user <github username> --repo <user repo>');
   process.exit(-1);
 }
