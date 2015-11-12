@@ -1,4 +1,5 @@
 var plural = require('pluralize');
+var check = require('check-more-types');
 
 function issueToLabels(issue) {
   return issue.labels.map(function (label) {
@@ -7,7 +8,11 @@ function issueToLabels(issue) {
 }
 
 function issueToText(issue) {
-  return '# ' + issue.number + ' ' + issueToLabels(issue) + ': ' + issue.title;
+  var labels = issueToLabels(issue).trim();
+  if (labels) {
+    labels += ' - ';
+  }
+  return '# ' + labels + issue.title;
 }
 
 function issuesToText(issues) {

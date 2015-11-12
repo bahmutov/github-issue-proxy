@@ -75,7 +75,8 @@ function loadedFromDB(record) {
     console.log('cached timestamp %s is younger than %s',
       ts, maxAllowedAge.humanize());
   }
-  return record;
+  la(check.array(record.issues), 'record is missing issues array', record);
+  return record.issues;
 }
 
 function dbLoad(key) {
