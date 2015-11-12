@@ -1,0 +1,27 @@
+{
+  "name": "github-issue-proxy",
+  "version": "1.0.0",
+  "description": "Github issues proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bahmutov/github-issue-proxy.git"
+  },
+  "keywords": [
+    "github",
+    "issue",
+    "issues",
+    "proxy",
+    "cache",
+    "gh"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/github-issue-proxy/issues"
+  },
+  "homepage": "https://github.com/bahmutov/github-issue-proxy#readme"
+}
