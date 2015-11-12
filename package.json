@@ -31,7 +31,8 @@
     "github": "0.2.4",
     "moment": "2.10.6",
     "nconf": "0.8.2",
-    "pluralize": "1.2.1"
+    "pluralize": "1.2.1",
+    "pouchdb": "5.1.0"
   },
   "config": {
     "pre-git": {
