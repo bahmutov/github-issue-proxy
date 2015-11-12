@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "issues": "git-issues",
     "commit": "git-issues && commit-wizard",
     "demo": "node index.js --user bahmutov --repo test-pre-git"
   },
@@ -28,7 +29,9 @@
   "homepage": "https://github.com/bahmutov/github-issue-proxy#readme",
   "dependencies": {
     "bluebird": "3.0.5",
+    "check-more-types": "2.1.2",
     "github": "0.2.4",
+    "lazy-ass": "1.0.0",
     "moment": "2.10.6",
     "nconf": "0.8.2",
     "pluralize": "1.2.1",
