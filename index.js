@@ -13,9 +13,16 @@ if (!hasValidOptions()) {
 var fetchIssues = require('./src/fetch-issues');
 var issueUtils = require('./src/issue-utils');
 
+function saveIssues(filename, content) {
+  var fs = require('fs');
+  fs.writeFileSync(filename, JSON.stringify(content, null, 2));
+  console.log('saved issues to %s', filename);
+}
+
 fetchIssues({
   user: config.get('user'),
   repo: config.get('repo')
 }).then(function (issues) {
   console.log(issueUtils.issuesToText(issues));
-});
+  saveIssues('./saved-issues.json', issues);
+}).catch(console.error.bind(console));

@@ -12,7 +12,7 @@ function issueToText(issue) {
   if (labels) {
     labels += ' - ';
   }
-  return '# ' + labels + issue.title;
+  return '# ' + issue.number + ' ' + labels + issue.title;
 }
 
 function issuesToText(issues) {
