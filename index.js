@@ -1,3 +1,14 @@
+var fetchIssues = require('./src/fetch-issues');
+
+function isCalled() {
+  return module.parent;
+}
+
+if (isCalled()) {
+  module.exports = fetchIssues;
+  return;
+}
+
 var config = require('./src/config');
 
 function hasValidOptions() {
@@ -10,7 +21,6 @@ if (!hasValidOptions()) {
   process.exit(-1);
 }
 
-var fetchIssues = require('./src/fetch-issues');
 var issueUtils = require('./src/issue-utils');
 
 function saveIssues(filename, content) {
